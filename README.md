@@ -30,4 +30,4 @@
 :: ATTENTION!
 now most texts are in Russian -> use translator;
 
-all messages save on server in /private/messages/ -> they are encrypted and this directory 
+all messages save on server -> they are in the encrypted directory: /private/messages/
