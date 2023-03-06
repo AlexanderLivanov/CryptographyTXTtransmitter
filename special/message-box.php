@@ -1,5 +1,7 @@
 <html>
-
+    <head>
+        <meta http-equiv="Refresh" content="1-5" />
+    </head>
 </html>
 
 <?php
