@@ -1,6 +1,6 @@
 <html>
     <head>
-        <meta http-equiv="Refresh" content="1-5" />
+        <meta http-equiv="Refresh" content="5" />
     </head>
 </html>
 
