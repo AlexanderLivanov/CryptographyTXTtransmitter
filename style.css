@@ -39,10 +39,23 @@ ul.nav a:hover {
     background-color: #f7f7f7;
     border-left: 1px solid #333;
     padding: 20px;
+    width: 80%;
 }
 
 .super-block {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+}
+
+#txt-message {
+    display: none;
+}
+
+.txt-message-box {
+    display: none;
+}
+
+.txt-message-box:target {
+    display: block;
 }

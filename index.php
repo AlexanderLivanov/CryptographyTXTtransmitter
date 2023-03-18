@@ -1,7 +1,11 @@
 <?php
 require_once('special/header.php');
 require_once('special/message-box.php');
-//test
+
+for ($n = 0; $n < count($txts); $n++) {
+    $n;
+    $n2 = $n;
+}
 ?>
 
 
@@ -20,7 +24,7 @@ require_once('special/message-box.php');
                 <?php
                 if (isset($_SESSION['user_id'])) {
                     for ($n = 0; $n < count($txts); $n++) {
-                        echo ("<li><a href='#'>" . rtrim(mb_strimwidth($txts[$n], strlen($txts[$n]) - 15, strlen($txts[$n]))) . '' . "\r\n" . "</a></li>");
+                        echo ("<li><a href='" . $txts[$n] . "'>" . rtrim(mb_strimwidth($txts[$n], strlen($txts[$n]) - 15, strlen($txts[$n]))) . '' . "\r\n" . "</a></li>");
                     }
                 } else {
                     echo '<h2 style="color: #f7f7f7; margin: 10px; text-decoration: underline;">Переписка доступна только зарегистрированным пользователям</h2>';
@@ -29,7 +33,16 @@ require_once('special/message-box.php');
             </ul>
         </div>
         <div class="message-box">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore dolorum iusto facere. Optio laborum, aut voluptatem facilis dignissimos pariatur eligendi veritatis voluptas enim quas! Deleniti aperiam placeat doloremque ab necessitatibus.
+            <?php
+            if (isset($_SESSION['user_id'])) {
+                for ($n = 0; $n < count($txts); $n++) {
+                    echo $n;
+                }
+            } else {
+                echo '<h2 style="color: #f7f7f7; margin: 10px; text-decoration: underline;"></h2>';
+            }
+            ?>
         </div>
     </div>
+
 </body>
