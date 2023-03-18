@@ -24,7 +24,7 @@ for ($n = 0; $n < count($txts); $n++) {
                 <?php
                 if (isset($_SESSION['user_id'])) {
                     for ($n = 0; $n < count($txts); $n++) {
-                        echo ("<li><a href='" . $txts[$n] . "'>" . rtrim(mb_strimwidth($txts[$n], strlen($txts[$n]) - 15, strlen($txts[$n]))) . '' . "\r\n" . "</a></li>");
+                        echo ("<li><a href='readfile?" . $n . "' id='" . $n . "' onclick='show()''>" . rtrim(mb_strimwidth($txts[$n], strlen($txts[$n]) - 15, strlen($txts[$n]))) . '' . "\r\n" . "</a></li>");
                     }
                 } else {
                     echo '<h2 style="color: #f7f7f7; margin: 10px; text-decoration: underline;">Переписка доступна только зарегистрированным пользователям</h2>';
@@ -36,7 +36,7 @@ for ($n = 0; $n < count($txts); $n++) {
             <?php
             if (isset($_SESSION['user_id'])) {
                 for ($n = 0; $n < count($txts); $n++) {
-                    echo $n;
+                    echo ('<div id="' . $n . '">' . $txts[$n] . '</div>');
                 }
             } else {
                 echo '<h2 style="color: #f7f7f7; margin: 10px; text-decoration: underline;"></h2>';
