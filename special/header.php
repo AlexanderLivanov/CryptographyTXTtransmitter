@@ -21,7 +21,7 @@ if (!isset($_SESSION['user_id'])) {
     $uname = $_SESSION['user_name'];
     echo ('
     <p>
-    <button><a href="new">NEW TXT</a></button>
+    <button><a href="new">Написать письмо</a></button>
     <p>
     ');
 }
@@ -35,8 +35,8 @@ if (!isset($_SESSION['user_id'])) {
 
 <body>
     
-    <div id="greeting"><?php echo ('Здравствуйте, ');
-                        echo $uname; ?></div>
+    <div id="greeting">
+        <?php echo ('Здравствуйте, '); echo $uname; ?></div>
     <hr style="width: 100%; text-align: center;">
 </body>
 

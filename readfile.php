@@ -2,7 +2,7 @@
 session_start();
 $uname = "";
 if (!isset($_SESSION['user_id'])) {
-    echo 'f';
+    echo '<h1 style="color: red;">служебная страница</h1>';
 } else {
     if (isset($_SESSION['user_id'])) {
         $hashed_user_name = hash('sha256', $_SESSION['user_name']);

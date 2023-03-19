@@ -19,9 +19,12 @@ require_once('special/message-box.php');
             <ul class="nav">
                 <?php
                 if (isset($_SESSION['user_id'])) {
-                    for ($n = 0; $n < count($txts); $n++) {
-                        // echo ("<li><a href='readfile?" . $n . "' id='" . $n . "' onclick='show()''>" . rtrim(mb_strimwidth($txts[$n], strlen($txts[$n]) - 15, strlen($txts[$n]))) . '' . "\r\n" . "</a></li>");
-                        echo ("<li><a href='#' id='" . $n . "' onclick='showTXT(" . $n  . ")'>" . rtrim(mb_strimwidth($txts[$n], strlen($txts[$n]) - 15, strlen($txts[$n]))) . '' . "\r\n" . "</a></li>");
+                    if(count($txts) > 0){
+                        for ($n = 0; $n < count($txts); $n++) {
+                            echo ("<li><a href='#' id='" . $n . "' onclick='showTXT(" . $n  . ")'>" . rtrim(mb_strimwidth($txts[$n], strlen($txts[$n]) - 15, strlen($txts[$n]))) . '' . "\r\n" . "</a></li>");
+                        }
+                    }else{
+                        echo '<h2 style="color: #f7f7f7; margin: 10px; text-decoration: underline;">У вас пока нет сообщений</h2>';
                     }
                 } else {
                     echo '<h2 style="color: #f7f7f7; margin: 10px; text-decoration: underline;">Переписка доступна только зарегистрированным пользователям</h2>';
